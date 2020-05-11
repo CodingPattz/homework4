@@ -10,7 +10,7 @@
     <title>Code Quiz</title>
 </head>
 <body>
-  <div class="scores"><a href="scores.html">Highscores</a></div>
+  <div class="scores"><a href="highscores.html">Highscores</a></div>
   <div class="timer">Time: <span id="time">0</span></div>
 
     <div class="wrapper">
@@ -18,9 +18,9 @@
           <h1>Who Wants to Be A Millionaire?</h1>
           <p>
             Can You Answer These $100 "Who Wants to Be a Millionaire" Questions?
-            Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-            <button id="start">Start Quiz</button>
+            Think twice before you answer, if your answer isn't correct we will rest ten seconds from the time!
           </p>
+          <button id="start">Start Quiz</button>
         </div>
 
         <div id="questions" class="hide">
@@ -30,9 +30,9 @@
   
         <div id="end-screen" class="hide">
           <h3>Did you have fun?</h2>
-          <p>How many sec it took you? <span id="final-score"></span>.</p>
+          <p>Seconds left... <span id="final-score"></span>.</p>
           <p>
-            Enter initials: <input type="text" id="initials" max="4" />
+            Enter initials: <input type="text" id="initials" max="3" />
             <button id="submit">Submit</button>
           </p>
         </div>

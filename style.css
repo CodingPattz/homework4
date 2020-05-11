@@ -1,6 +1,10 @@
 body {
     background: url('img/wallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: clone-rounded-latin, sans-serif;
+    font-weight: 300;   
+    font-style: normal;
+    font-size: 20px;
   }
   .wrapper {
     margin: 100px auto 0 auto;
@@ -77,6 +81,10 @@ body {
     font-size: 20px;
     color: #656565;
   }
+
+  input[type="text"] {
+    font-size: 100%;
+  }
   
   a {
     color: #05A7BF;
@@ -114,4 +122,8 @@ body {
   li {
     padding: 5px;
     list-style: decimal inside none;
+  }
+
+  li:nth-child(odd) {
+    background-color:#82D7E8;
   }

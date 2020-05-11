@@ -147,6 +147,7 @@ function startQuiz() {
   function saveHighscore() {
     var initials = initialsEl.value.trim();
   
+    // make sure value wasn't empty
     if (initials !== "") {
       var highscores =
         JSON.parse(window.localStorage.getItem("highscores")) || [];
@@ -158,8 +159,7 @@ function startQuiz() {
   
       highscores.push(newScore);
       window.localStorage.setItem("highscores", JSON.stringify(highscores));
-  
-      window.location.href = "scores.html";
+      window.location.href = "highscores.html";
     }
   }
   
@@ -175,32 +175,3 @@ function startQuiz() {
   startBtn.onclick = startQuiz;
   
   initialsEl.onkeyup = checkForEnter;
-  
-
-
-  // To Do List reference > Score saved
-  function printHighscores() {
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-  
-    highscores.sort(function(a, b) {
-      return b.score - a.score;
-    });
-  
-    highscores.forEach(function(score) {
-      var liTag = document.createElement("li");
-      liTag.textContent = score.initials + " - " + score.score;
-  
-      var olEl = document.getElementById("highscores");
-      olEl.appendChild(liTag);
-    });
-  }
-  // Clear Highscores
-  function clearHighscores() {
-    window.localStorage.removeItem("highscores");
-    window.location.reload();
-  }
-  
-  document.getElementById("clear").onclick = clearHighscores;
-  
-  printHighscores();
-  
